@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
@@ -11,27 +11,26 @@
     <link rel="icon" href="assets/logo-2.png" />
     <meta
       name="description"
-      content="Hola bienvenido a mi Portafolio web, 
-    soy Franco Navarro, Desarrollador y diseñador web"
+      content="Cerveza Salta Cautiva 🍺🦙 De cautivante sabor, para beber tranqui."
     />
-    <link rel="canonical" href="https://franco-navarro.github.io/Portafolio-CV/" />
-    <link rel="favicon" href="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
-    <link rel="apple-touch-icon" href="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
+    <link rel="canonical" href="https://franco-navarro.github.io/Salta-Cautiva/" />
+    <link rel="favicon" href="https://franco-navarro.github.io/Salta-Cautiva/assets/favicon.jpg" />
+    <link rel="apple-touch-icon" href="https://franco-navarro.github.io/Salta-Cautiva/assets/favicon.jpg" />
     <meta name="theme-color" content="#F2DBB2" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" name="twitter:title" content="Portafolio CV - Franco" />
-    <meta property="og:image" name="twitter:image" content="https://franco-navarro.github.io/Portafolio-CV/assets/favicon.jpg" />
-    <meta property="og:url" name="twitter:url" content="https://franco-navarro.github.io/Portafolio-CV" />
+    <meta property="og:title" name="twitter:title" content="Cerveza Salta Cautiva" />
+    <meta property="og:image" name="twitter:image" content="https://franco-navarro.github.io/Salta-Cautiva/assets/favicon.jpg" />
+    <meta property="og:url" name="twitter:url" content="https://franco-navarro.github.io/Salta-Cautiva/" />
     <meta
       property="og:description"
       name="twitter:description"
-      content=" Hola bienvenido a mi Portafolio web, 
-    soy Franco Navarro, Desarrollador y diseñador web"
+      content="Cerveza Salta Cautiva 🍺🦙 De cautivante sabor, para beber tranqui."
     />
-    <link rel="canonical" href="https://franco-navarro.github.io/Portafolio-CV" />
+    <link rel="canonical" href="https://franco-navarro.github.io/Salta-Cautiva/" />
   </head>
-<body class="body">
+<body class="body" id="body">
+
     <header class="header">
         <div class="header-logo">
             <a href="#home"><img src="assets/logo-1.png" alt="¿Es una llama? ¿es una alpaca? ¿es un guanaco? No lo sabemos, y acá no estamos para cuestionar, sino para disfrutar"></a>
@@ -49,47 +48,56 @@
               <path d="M17.5002 0L9.99912 7.5L2.49978 0L0 2.5L7.49934 10L0 17.5L2.49978 20L9.99912 12.5L17.5002 20L20 17.5L12.5007 10L20 2.5L17.5002 0Z" fill="#F2DBB2"/>
               </svg>
           </button>
+          <div class="burro" id="burro">
+            <img src="assets/burro-asno.png" alt="">
+          </div>
           <ul class="header-nav-list" id="menu-list">
             <li class="header-nav-list-a">
               <a href="#home" id="list-a">INICIO</a>
             </li>
             <li class="header-nav-list-a">
-              <a href="#rubia" id="list-a">RUBIA</a>
+              <a href="#beer-contain" id="list-a">BIRRAS</a>
             </li>
             <li class="header-nav-list-a">
-              <a href="#roja" id="list-a">ROJA</a>
-            </li>
-            <li class="header-nav-list-a">
-              <a href="#blend" id="list-a">BLEND</a>
+              <a href="#social" id="list-a">REDES</a>
             </li>
           </ul>
         </nav>
     </header>
     <main>
+        <section class="loader" id="load">
+          <div class="loader-content">
+            <h2>Un segundo por favor</h2>
+            <img src="assets/load.png" alt="">
+            <h2>Estamos preparando todo</h2>
+          </div>
+        </section>
 
         <section class="hero-section" id="home">
-          <article class="hero-title">
+          <article class="hero-title" id="title">
             <h1>CERVEZA SALTA CAUTIVA</h1>
             <h3>DE CAUTIVANTE SABOR PARA BEBER TRANQUI</h3>
           </article>
           <article class="hero-image" >
             <img src="assets/todas.png" alt="" id="beer">
             <div class="background">
-              <div class="background-1"></div>
-              <div class="background-2"></div>
-              <div class="background-3"></div>
-              <div class="background-4"></div>
+              <div class="background-4" id="back-4"></div>
+              <div class="background-3" id="back-3"></div>
+              <div class="background-2" id="back-2"></div>
+              <div class="background-1" id="back-1"></div>
+              
             </div>
           </article>
           <article class="hero-menu" >
             <div class="hero-menu-a">
-              <a href="#roja">ROJA</a>
-              <a href="#blend">BLEND</a>
-              <a href="#rubia">RUBIA</a>
+              <a href="#beer-contain">ROJA</a>
+              <a href="#beer-contain">BLEND</a>
+              <a href="#beer-contain">RUBIA</a>
             </div>
             <h2>PROBALAS TRANQUI</h2>
           </article>
         </section>
+
 
         <section class="beer-present" id="beer-contain">
           <article class="beer" id="rubia">
@@ -108,7 +116,6 @@
             </div>
             <div class="beer-contain-content2">
               <div class="beer-content2">
-
                 <div class="beer-content2-card">
                   <p>ABV <span>5%</span></p>
                   <p>IBU <span>10</span></p>
@@ -203,10 +210,10 @@
               </div>
             </div>
             <div class="background2">
-              <div class="background-1"></div>
-              <div class="background-2"></div>
-              <div class="background-3"></div>
               <div class="background-4"></div>
+              <div class="background-3"></div>
+              <div class="background-2"></div>
+              <div class="background-1"></div>
             </div>
           </article>
         </section>

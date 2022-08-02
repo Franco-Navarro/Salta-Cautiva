@@ -31,6 +31,7 @@
   body {
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     color: var(--text-color-white);
     background-color: var(--background-color);
   }
@@ -83,6 +84,58 @@
   }
 
   /* Site Style */
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .loader-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+  }
+
+  .loader-content h2{
+    color: var(--text-color-black);
+    font-size: 2em;
+    font-family: var(--font);
+    font-weight: 700;
+    margin: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .loader-content > img{
+    animation: rotate 4.5s infinite linear;
+    filter:drop-shadow( 4px 0 30px var(--shadow));
+  }
 
   .header {
     background-color: var(--first-color);
@@ -146,6 +199,24 @@
     box-sizing: border-box;
   }
 
+  .burro {
+    position: fixed;
+    width: 100%;
+    left: 100vw;
+    bottom: 1em;
+    z-index: 9999000;
+    transition: left 0.3s;
+  }
+
+  .burro img{
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    transform: rotateY(180deg);
+  }
+
   .header-nav-list-center {
     left: 0;
   }
@@ -166,6 +237,8 @@
     color: var(--second-color-orange);
     border: 1px solid var(--second-color-orange);
   }
+
+  
 
   .footer {
     background-color: var(--first-color);
@@ -204,6 +277,8 @@
     padding: 1em 2em;
     box-sizing: border-box;
     font-family: var(--font);
+    position: relative;
+    z-index: -4000;
   }
 
   .hero-title h1{
@@ -229,7 +304,7 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    z-index: -10000;
+    z-index: -1000;
   }
 
   .background .background-1 {
@@ -239,7 +314,6 @@
     height: 84%;
     bottom: 0;
     position: absolute;
-    z-index: -900;
   }
 
   .background .background-2 {
@@ -249,7 +323,6 @@
     height: 86%;
     bottom: 0;
     position: absolute;
-    z-index: -1100;
   }
 
   .background .background-3 {
@@ -259,7 +332,6 @@
     height: 88%;
     bottom: 0;
     position: absolute;
-    z-index: -1300;
   }
 
   .background .background-4 {
@@ -270,13 +342,13 @@
     height: 90%;
     bottom: 0;
     position: absolute;
-    z-index: -1500;
   }
 
   .hero-image img{
     width: 80%;
     max-width: 600px;
     filter:drop-shadow( 4px 0 30px var(--shadow));
+    position: relative;
   }
 
   .hero-menu {
@@ -284,6 +356,7 @@
     background: var(--first-color);
     text-align: center;
     padding-bottom: 5%;
+    
   }
 
   .hero-menu-a {
@@ -310,6 +383,8 @@
   .hero-menu h2 {
     margin-top: 0.5em;
   }
+
+
 
   .beer-present {
     display: grid;
@@ -529,7 +604,7 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    z-index: -10000;
+    z-index: -3000;
   }
 
   .background2 .background-1 {
@@ -539,7 +614,6 @@
     height: 40%;
     bottom: 0;
     position: absolute;
-    z-index: -900;
   }
 
   .background2 .background-2 {
@@ -549,7 +623,6 @@
     height: 54%;
     bottom: 0;
     position: absolute;
-    z-index: -1100;
   }
 
   .background2 .background-3 {
@@ -559,7 +632,6 @@
     height: 62%;
     bottom: 0;
     position: absolute;
-    z-index: -1300;
   }
 
   .background2 .background-4 {
@@ -570,7 +642,6 @@
     height: 73%;
     bottom: 0;
     position: absolute;
-    z-index: -1500;
   }
 
   .hidden {
@@ -722,6 +793,11 @@
     padding-bottom: 5%;
   }
 
+  .hero-image img {
+    width: auto;
+    height: 90%;
+  }
+
   .beer-present {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -829,6 +905,17 @@
     align-items: center;
   }
 
+  .beer-present-extend #rubia .beer-img:hover > h3{
+    display: none;
+  }
+  .beer-present-extend #roja .beer-img:hover > h3{
+    display: none;
+  }
+  .beer-present-extend #blend .beer-img:hover > h3{
+    display: none;
+  }
+
+
   .social {
     padding-bottom: var(--height-footer);
   }
@@ -839,6 +926,15 @@
 
   .social-title  h3{
     font-size: 2.2em;
+  }
+
+  .social-networks {
+    display: flex;
+    margin: 2em;
+  }
+
+  .social-network {
+    margin: 2em;
   }
 
 }
